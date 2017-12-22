@@ -26,7 +26,8 @@ module.exports = function() {
                 return '/// <reference path="..' + filepath + '" />';
             },
             tscOptions: {
-                target: 'ES5',
+                target: 'ES2017',
+                "lib": ["es2017"],
                 declarationFiles: true,
                 noExternalResolve: true,
                 module: 'commonjs',
