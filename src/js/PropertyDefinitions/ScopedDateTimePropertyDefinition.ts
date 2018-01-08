@@ -75,7 +75,7 @@ export class ScopedDateTimePropertyDefinition extends DateTimePropertyDefinition
      * @return  {DateTime}              The converted DateTime.
      */
     ScopeToTimeZone(service: ExchangeServiceBase, dateTime: DateTime, propertyBag: PropertyBag, isUpdateOperation: boolean): DateTime {
-        EwsLogging.Assert(false, "ScopedDateTimePropertyDefinition.ScopeToTimeZone", "[Info]:  TimeZone info has been updated, Please report any bugs to github", true);
+        // EwsLogging.Assert(false, "ScopedDateTimePropertyDefinition.ScopeToTimeZone", "[Info]:  TimeZone info has been updated, Please report any bugs to github", true);
         if (!propertyBag.Owner.GetIsCustomDateTimeScopingRequired()) {
             // Most item types do not require a custom scoping mechanism. For those item types,
             // use the default scoping mechanism.
