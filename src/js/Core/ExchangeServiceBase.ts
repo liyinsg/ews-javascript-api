@@ -91,7 +91,11 @@ export class ExchangeServiceBase {
 
     private xhrApi: IXHRApi = null;
     get XHRApi(): IXHRApi {
-        return this.xhrApi || XHRFactory.XHRApi;
+        if (!this.xhrApi) {
+          this.xhrApi = XHRFactory.XHRApi;
+          delete XHRFactory.xhrHelper;
+        }
+        return this.xhrApi;
     }
     set XHRApi(xhrApi: IXHRApi) {
         this.xhrApi = xhrApi || XHRFactory.XHRApi;
